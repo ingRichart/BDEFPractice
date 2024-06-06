@@ -1,0 +1,43 @@
+@model List<PatientModel>
+@{
+    ViewData["Title"] = "Pacientes";
+    int numero = 0;
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<h1>Lista de Pacientes</h1>
+<a class="btn btn-outline.primary" asp-action="PatientAdd" asp-asp-controller="Patient">Agregar Pacientes</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            </tr>
+    </thead>
+    
+    <tbody>
+        @foreach( var patient in Model )
+        {
+        {
+            numero++;
+        }
+
+         <tr>
+            <th scope="row">@numero</th>
+            <td>@patient.Name</td>
+            <td>@patient.LastName</td>
+            <td>@patient.Email</td>
+            <td>@patient.Birth</td>
+            <td>
+                <a class="btn btn-outline-info" asp-action="PatientEdit" asp-controller="Patient" asp-route-id="@patient.Id">Editar</a>
+                <a class="btn btn-outline-danger" asp-action="PatientDelete" asp-controller="Patient" asp-route-id="@patient.Id">Borrar</a>
+            </td>
+         </tr>
+        }     
+    </tbody>
+</table>
