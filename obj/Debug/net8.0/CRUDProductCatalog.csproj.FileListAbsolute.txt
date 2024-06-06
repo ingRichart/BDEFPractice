@@ -134,3 +134,4 @@ C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.pdb
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.genruntimeconfig.cache
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\ref\CRUDProductCatalog.dll
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.sourcelink.json

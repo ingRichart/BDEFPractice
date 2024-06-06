@@ -72,6 +72,48 @@ public class HomeController : Controller
         return View(list);
     }
 
+    public IActionResult StudentAdd()
+    {
+        //para insertar
+        Student estudiante = new Student();
+        estudiante.Name = "Carlos";
+        estudiante.Id = new Guid();
+        estudiante.Tetra = 5;
+        estudiante.LastName = "Marin";
+        estudiante.Cuota= 2000;
+
+        this._context.Students.Add(estudiante);
+        this._context.SaveChanges();
+
+        return View();
+    }
+
+    public IActionResult StudentEdit()
+    {
+        //para Actualizar
+        Student estudianteActualiza = this._context.Students
+        .Where(c => c.Id==new Guid("2763454D-64AA-40C4-5647-08DC85007CF8"))
+        .First();
+       estudianteActualiza.Name="Veronica";
+       estudianteActualiza.LastName="Torres";
+       this._context.Students.Update(estudianteActualiza);
+       this._context.SaveChanges();
+        return View();
+    }
+    public IActionResult StudentDelete()
+    {
+        //borrar registro
+        Student estudianteBorrado = this._context.Students
+        .Where(c =>c.Id==new Guid("2763454D-64AA-40C4-5647-08DC85007CF8"))
+        .First();
+        this._context.Students.Remove(estudianteBorrado);
+        this._context.SaveChanges();
+
+        return View();
+    }
+
+
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
