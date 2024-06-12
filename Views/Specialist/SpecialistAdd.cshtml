@@ -1,0 +1,32 @@
+@model SpecialistModel
+
+@{
+    ViewData["Title"] = "Alta de Especialistas";
+    
+}
+
+<div class="text-center">
+    <h1 class="display-2">Alta de Especialista</h1>  
+</div>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-controller="Specialist" asp-action="SpecialistAdd">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" asp-for="Name" placeholder="Escriba el Nombre del Especialista" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LastName" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" asp-for="LastName" placeholder="Escriba el Apellido" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Major" class="form-label">Especialidad</label>
+        <input type="text" class="form-control" asp-for="Major" placeholder="Escriba la Especialidad" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-controller="Specialist" asp-action="SpecialistList" class="btn btn-secundary mb-3">Regresar</a>
+</form>

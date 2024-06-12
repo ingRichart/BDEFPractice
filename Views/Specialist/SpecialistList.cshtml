@@ -1,0 +1,41 @@
+@model List<SpecialistModel>
+@{
+    ViewData["Title"] = "Especialistas";
+    int numero = 0;
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<h1>Lista de Especialistas</h1>
+<a class="btn btn-outline.primary" asp-action="SpecialistAdd" asp-asp-controller="Specialist">Agregar Especialista</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Especialidad</th>
+            </tr>
+    </thead>
+    
+    <tbody>
+        @foreach( var specialist in Model )
+        {
+        {
+            numero++;
+        }
+
+         <tr>
+            <th scope="row">@numero</th>
+            <td>@specialist.Name</td>
+            <td>@specialist.LastName</td>
+            <td>@specialist.Major</td>
+            <td>
+                <a class="btn btn-outline-info" asp-action="SpecialistEdit" asp-controller="Specialist" asp-route-id="@specialist.Id">Editar</a>
+                <a class="btn btn-outline-danger" asp-action="SpecialistDelete" asp-controller="Specialist" asp-route-id="@specialist.Id">Borrar</a>
+            </td>
+         </tr>
+        }     
+    </tbody>
+</table>

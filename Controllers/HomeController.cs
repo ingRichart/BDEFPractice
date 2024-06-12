@@ -18,46 +18,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        Student estudiante = new Student();
-            estudiante.Id = new Guid();
-            estudiante.Name = "Ernesto";
-            estudiante.LastName = "Ramirez";
-            estudiante.Tetra= 5;
-            estudiante.Cuota = 3000;
-
-            this._context.Students.Add(estudiante);
-            this._context.SaveChanges();
 
         return View();
     }
 
     public IActionResult Privacy()
     {
-
-        //para insertar
-        //Students estudiante = new Students();
-        //estudiante.name = "Carlos";
-        //estudiante.Id = new Guid();
-        //estudiante.Tetra = 5;
-        //estudiante.LastName = "Marin";
-
-        //this._context.Students.Add(estudiante);
-        //this._context.SaveChanges();
-        
-        //para Actualizar
-        //Students estudianteActualiza = this._context.Students
-        //.Where(c => c.Id==new Guid("2763454D-64AA-40C4-5647-08DC85007CF8"))
-        //.First();
-       // estudianteActualiza.name="Veronica";
-       // estudianteActualiza.LastName="Torres";
-        //this._context.Students.Update(estudianteActualiza);
-       // this._context.SaveChanges();
-          //borrar registro
-        //Students estudianteBorrado = this._context.Students
-        //.Where(c =>c.Id==new Guid("2763454D-64AA-40C4-5647-08DC85007CF8"))
-        //.First();
-        //this._context.Students.Remove(estudianteBorrado);
-        //this._context.SaveChanges();
         
          List<StudentModel> list = new List<StudentModel>();
          list = _context.Students.Select(s => new StudentModel()
@@ -72,47 +38,120 @@ public class HomeController : Controller
         return View(list);
     }
 
+    [HttpGet]
     public IActionResult StudentAdd()
     {
-        //para insertar
-        Student estudiante = new Student();
-        estudiante.Name = "Carlos";
-        estudiante.Id = new Guid();
-        estudiante.Tetra = 5;
-        estudiante.LastName = "Marin";
-        estudiante.Cuota= 2000;
+        return View();
+    }
 
-        this._context.Students.Add(estudiante);
+
+    [HttpPost]
+    public IActionResult StudentAdd(StudentModel model)
+    {
+        //para insertar
+        if (!ModelState.IsValid)
+        {
+            return View(model);
+        }
+
+        Student s = new Student();
+        s.Id = model.Id;
+        s.Name = model.Name;
+        s.LastName = model.LastName;
+        s.Tetra = model.Tetra;
+        s.Cuota = model.Cuota;
+
+        this._context.Students.Add(s);
         this._context.SaveChanges();
 
-        return View();
+        return RedirectToAction("Privacy", "Home");
     }
 
-    public IActionResult StudentEdit()
+    [HttpGet]
+    public IActionResult StudentEdit(Guid Id)
     {
-        //para Actualizar
-        Student estudianteActualiza = this._context.Students
-        .Where(c => c.Id==new Guid("2763454D-64AA-40C4-5647-08DC85007CF8"))
-        .First();
-       estudianteActualiza.Name="Veronica";
-       estudianteActualiza.LastName="Torres";
-       this._context.Students.Update(estudianteActualiza);
-       this._context.SaveChanges();
-        return View();
+        Student? estudiante = this._context.Students.Where(s => s.Id == Id).FirstOrDefault();
+
+        if(estudiante == null)
+        {
+            return RedirectToAction ("Privacy","Home");
+        } 
+
+        StudentModel model = new StudentModel();
+        model.Id = Id;
+        model.Name = estudiante.Name;
+        model.LastName = estudiante.LastName;
+        model.Tetra = estudiante.Tetra;
+        model.Cuota = estudiante.Cuota;
+
+        return View(model);
     }
-    public IActionResult StudentDelete()
+
+    [HttpPost]
+    public IActionResult StudentEdit(StudentModel model)
+    {
+
+        Student estudianteActualiza = this._context.Students
+        .Where(s => s.Id == model.Id).First();
+
+        if (estudianteActualiza == null)
+        {
+            return RedirectToAction ("Privacy", "Home");
+        }
+        
+        estudianteActualiza.Name = model.Name;
+        estudianteActualiza.LastName = model.LastName;
+        estudianteActualiza.Tetra = model.Tetra;
+        estudianteActualiza.Cuota = model.Cuota;
+
+        this._context.Students.Update(estudianteActualiza);
+        this._context.SaveChanges();
+        return RedirectToAction("Privacy", "Home");
+    }
+
+    [HttpGet]
+    public IActionResult StudentDelete(Guid Id)
     {
         //borrar registro
-        Student estudianteBorrado = this._context.Students
-        .Where(c =>c.Id==new Guid("2763454D-64AA-40C4-5647-08DC85007CF8"))
-        .First();
-        this._context.Students.Remove(estudianteBorrado);
-        this._context.SaveChanges();
+        Student? estudianteborrado = this._context.Students.Where(s => s.Id == Id).FirstOrDefault();
 
-        return View();
+        if (estudianteborrado == null)
+        {
+            return RedirectToAction("Privacy", "Home");
+        }
+
+        if (!ModelState.IsValid)
+        {
+            return RedirectToAction("Privacy", "Home");
+        }
+
+        StudentModel model = new StudentModel();
+        model.Id = Id;
+        model.Name = estudianteborrado.Name;
+        model.LastName = estudianteborrado.LastName;
+        model.Tetra = estudianteborrado.Tetra;
+        model.Cuota = estudianteborrado.Cuota;
+
+        return View(model);
     }
 
+    [HttpPost]
+    public IActionResult StudentDelete(StudentModel model)
+    {
+        bool exists = this._context.Students.Any(s => s.Id == model.Id);
 
+        if(!exists)
+        {
+            return RedirectToAction("Privacy", "Home");
+        } 
+
+        Student estudianteborrado = this._context.Students.Where(s => s.Id == model.Id).First();
+
+        this._context.Students.Remove(estudianteborrado);
+        this._context.SaveChanges();
+
+        return RedirectToAction("Privacy", "Home");
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

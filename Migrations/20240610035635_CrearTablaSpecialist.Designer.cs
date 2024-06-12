@@ -4,6 +4,7 @@ using CRUDProductCatalog;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUDProductCatalog.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240610035635_CrearTablaSpecialist")]
+    partial class CrearTablaSpecialist
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,12 +44,7 @@ namespace CRUDProductCatalog.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("SpecialistId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("SpecialistId");
 
                     b.ToTable("Patients");
                 });
@@ -95,20 +93,6 @@ namespace CRUDProductCatalog.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Students");
-                });
-
-            modelBuilder.Entity("CRUDProductCatalog.Entities.Patient", b =>
-                {
-                    b.HasOne("CRUDProductCatalog.Entities.Specialist", "Specialist")
-                        .WithMany("Patients")
-                        .HasForeignKey("SpecialistId");
-
-                    b.Navigation("Specialist");
-                });
-
-            modelBuilder.Entity("CRUDProductCatalog.Entities.Specialist", b =>
-                {
-                    b.Navigation("Patients");
                 });
 #pragma warning restore 612, 618
         }

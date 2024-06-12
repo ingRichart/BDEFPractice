@@ -5,17 +5,14 @@ using System.Threading.Tasks;
 
 namespace CRUDProductCatalog.Entities
 {
-    public class Patient
+    public class Specialist
     {
-
         public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? LastName { get; set; }
-        public string Email { get; set; }
-        public DateTime Birth { get; set; }
+        public string Major { get; set; }
 
-        public Guid? SpecialistId { get; set; }
-        public Specialist? Specialist { get; set; }
-        
+        public List<Patient> Patients { get; set;}
+
     }
 }

@@ -17,6 +17,7 @@
             <th scope="col">Apellido</th>
             <th scope="col">Correo</th>
             <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Especialista</th>
             </tr>
     </thead>
     
@@ -33,6 +34,7 @@
             <td>@patient.LastName</td>
             <td>@patient.Email</td>
             <td>@patient.Birth</td>
+            <td>@patient.SpecialistName</td>
             <td>
                 <a class="btn btn-outline-info" asp-action="PatientEdit" asp-controller="Patient" asp-route-id="@patient.Id">Editar</a>
                 <a class="btn btn-outline-danger" asp-action="PatientDelete" asp-controller="Patient" asp-route-id="@patient.Id">Borrar</a>

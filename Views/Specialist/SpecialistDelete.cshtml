@@ -1,0 +1,14 @@
+@model SpecialistModel
+@{
+    ViewData["Title"] = "Borrar Especialista";
+
+}
+
+<div class="mb-3">
+    ¿Estas seguro que deseas borrar al Especialista?
+</div>
+
+<form asp-controller="Specialist" asp-action="SpecialistDelete">
+    <button type="summit" class="btn btn-danger" asp-action="SpecialistDelete" asp-controller="Specialist">Borrar</button>
+    <a asp-controller="Specialist" asp-action="SpecialistList" class="btn btn-secundary">Regresar</a>
+</form>

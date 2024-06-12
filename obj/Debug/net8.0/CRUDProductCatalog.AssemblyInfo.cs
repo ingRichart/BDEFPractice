@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDProductCatalog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29bb0a7c57b6abae4acee18d5b95ac9b3dc26cb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+606dd49f1be6a31515558301f194565d5af47adb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDProductCatalog")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDProductCatalog")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
