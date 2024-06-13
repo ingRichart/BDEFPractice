@@ -1,3 +1,12 @@
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.csproj.AssemblyReference.cache
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.AssemblyInfoInputs.cache
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.AssemblyInfo.cs
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.csproj.CoreCompileInputs.cache
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.RazorAssemblyInfo.cache
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.RazorAssemblyInfo.cs
+C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.sourcelink.json
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\bin\Debug\net8.0\appsettings.json
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\bin\Debug\net8.0\CRUDProductCatalog.staticwebassets.runtime.json
@@ -110,14 +119,6 @@ C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.csproj.AssemblyReference.cache
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.AssemblyInfoInputs.cache
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.AssemblyInfo.cs
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.csproj.CoreCompileInputs.cache
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.RazorAssemblyInfo.cache
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.RazorAssemblyInfo.cs
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\staticwebassets\msbuild.CRUDProductCatalog.Microsoft.AspNetCore.StaticWebAssets.props
@@ -134,4 +135,3 @@ C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.pdb
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.genruntimeconfig.cache
 C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\ref\CRUDProductCatalog.dll
-C:\Users\ialda\OneDrive\Documentos\UN CEMR\6. SEXTO TETRA\3. POO II\2do Parcial\CRUDProductCatalog\obj\Debug\net8.0\CRUDProductCatalog.sourcelink.json
