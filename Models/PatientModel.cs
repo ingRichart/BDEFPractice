@@ -22,7 +22,6 @@ namespace CRUDProductCatalog.Models
         public Guid? SpecialistId { get; set; }
         public SpecialistModel? Specialist { get; set; }
         public string? SpecialistName { get; set; }
-        public string? SpecialistMajor { get; set; }
         public List<SelectListItem> SpecialistL { get; set; }
     }
 }

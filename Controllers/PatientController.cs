@@ -40,7 +40,7 @@ namespace CRUDProductCatalog.Controllers
         public async Task<IActionResult> PatientAdd()
         {
             PatientModel patient = new PatientModel();
-            patient.SpecialistL = await _context.Specialists.Select(s => new SelectListItem(){ Value = s.Id.ToString(), Text = s.Major + s.Name}).ToListAsync();
+            patient.SpecialistL = await _context.Specialists.Select(s => new SelectListItem(){ Value = s.Id.ToString(), Text = s.Major}).ToListAsync();
 
             return View(patient);
         }
